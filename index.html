@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
 <style>
+
+  body{
+
+    width: 100vw;
+    height: 100vw;
+
+    background: url(./img/space.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+  
 input[type=text], select {
   width: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 5px 0;
   display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 40px;
+  border: 2px solid #ccc;
+  border-radius: 30px;
   box-sizing: border-box;
 }
 
@@ -27,36 +44,135 @@ input[type=submit]:hover {
 }
 
 div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+  
+  width: 750px;
+    height: 800px;
+    
+
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter:blur(10px);
+
+    border-radius: 40px;
+    border: 3px solid rgb(255, 255, 255,0.3);
+    box-shadow: 0 0 30px rgb(0, 0, 0,0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }
+
+
+
+
+#btn{
+width: 100%;
+height: 50px;
+border-radius: 40px;
+border: none;
+font-size: 1.5em;
+text-transform: uppercase;
+font-weight: 600;
+margin: 10px 0;
+cursor: pointer;
+transition: 0.5s;
+
+}
+
+#btn:hover{
+
+    background: rgb(0, 0, 0,0.3);
+    color: #fff;
+}
+
+
+h2{
+margin-top:0%;
+color: #fff;
+text-transform: uppercase;
+padding: 20px 0;
+font-size: 2em;
+text-align: center;
+
+}
+
+
+.fname{
+
+color: #fff;
+text-transform: uppercase;
+padding: 20px 0;
+margin-left:4%;
+
+font-size: 1em;
+
+}
+
+.pera{
+
+color: #fff;
+text-transform: uppercase;
+padding: 20px 0;
+margin: 0;
+font-size: 1em;
+}
+
+.radiobutton{
+
+  color: #fff;
+}
+
 </style>
 <body>
 
-<h3>IT Complend </h3>
 
 <div>
   <form action="https://api.web3forms.com/submit" method="POST">
 
     <input type="hidden" name="access_key" value="3d2acedc-d0d1-49d3-9aca-15e8356bb901">
+
+
+
     
-    <label for="fname">User Name</label>
+
+
+    <h2>login </h2>
+
+
+    <label class="fname">User Name</label>
     <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-    <label for="lname">Office Number</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-    <input type="checkbox" name="" id=""><input type="checkbox"> bike </input>
-
-    <label for="country">Country</label>
+    <label class="fname"> Please select your Office...</label>
     <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
+    
+      <OPtion>..SELECT...</OPtion>
+      <option value="australia">OFF 1 </option>
+      <option value="India">OFF 2</option>
+      <option value="usa">OFF 3</option>
+      <option value="usa">OFF 4</option>
     </select>
   
-    <input type="submit" value="Submit">
+    <p class="pera">Please select your Computer Machine...</p>
+
+  <input type="radio" id="lname" name="wich machin" value="HP">
+  <label class="radiobutton">HP</label><br>
+
+  <input type="radio" id="lname" name="wich machin" value="DELL">
+  <label class="radiobutton">DELL</label><br>
+
+  <input type="radio" id="lname" name="wich machin" value="ALL IN ONE">
+  <label class="radiobutton"> ALL IN ONE </label><br>
+
+  <input type="radio" id="lname" name="wich machin" value="OTHER">
+  <label class="radiobutton">OTHER <br></label>
+ <br>
+
+    <label class="fname">What is the Problem</label>
+    <input type="text" id="lname" name="Office Number" placeholder="Type is Your Problem.....">
+    <input id="btn" type="submit" value="Submit">
+
+    
   </form>
 </div>
 
